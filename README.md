@@ -1,4 +1,5 @@
-#TiktokToDiscord Bot
+# TiktokToDiscord Bot
+
 This is a discord bot that can post the link of new Tiktok posts from a given creator into a discord channel
 
 ###  Configuration
