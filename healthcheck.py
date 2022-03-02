@@ -2,12 +2,12 @@ from socket import socket, AF_INET, SOCK_STREAM
 from time import sleep
 
 
-def selenium_health_check(db_name: str, db_port: int | str):
+def selenium_health_check(hostname: str, port: int | str):
     s = socket(AF_INET, SOCK_STREAM)
-    request = f'GET /wd/hub/status HTTP/1.1\r\nHost:{db_name}\r\n\r\n'
+    request = f'GET /wd/hub/status HTTP/1.1\r\nHost:{hostname}\r\n\r\n'
     while True:
         try:
-            s.connect((db_name, int(db_port)))
+            s.connect((hostname, int(port)))
             while True:
                 s.send(request.encode())
                 response = s.recv(145)
