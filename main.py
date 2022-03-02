@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from config import Settings
 from utilities import sync_to_async
 from healthcheck import selenium_health_check
-import pickle
 
 
 def url_parser(html: str) -> set[str]:
